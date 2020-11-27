@@ -73,3 +73,5 @@ fabric.properties
 pimetrics/__pycache__
 pimetrics/libs/__pycache__
 pimetrics/libs/tools/__pycache__
+
+*.ini

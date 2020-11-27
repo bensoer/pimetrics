@@ -30,6 +30,10 @@ class ListenerSocket:
         connection, client_address = self.__listener_socket.accept()
 
         tmp_file_path = TEMP_DIR + os.sep + "metrics.tar.gz"
+        # delete any existing temp file if there is one first
+        if os.path.exists(tmp_file_path):
+            os.remove(tmp_file_path)
+
         fp = open(tmp_file_path, "wb+")
 
         try:
